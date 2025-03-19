@@ -1,4 +1,3 @@
-
 import { ArrowDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/ui/AnimatedSection";
@@ -6,25 +5,24 @@ import { buttonVariants } from "@/components/ui/button";
 import ProjectCard from "@/components/ui/ProjectCard";
 
 const Index = () => {
-  // Sample projects data (replace with your actual projects)
   const featuredProjects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
+      title: "Anneso-Naturelle",
       description: "A modern e-commerce platform built with React and Node.js",
       imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475",
       tags: ["React", "Node.js", "MongoDB"],
-      demoUrl: "#",
+      demoUrl: "anneso-naturelle.fr",
       codeUrl: "#"
     },
     {
       id: 2,
-      title: "Portfolio Website",
-      description: "A sleek portfolio website showcasing creative works",
+      title: "Dreamary",
+      description: "A mobile app for noting down your dreams and analyzing them, with social aspect and gamification. Work in progress.",
       imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-      tags: ["React", "Tailwind CSS", "Framer Motion"],
+      tags: ["Kotlin", "Jetpack Compose", "Firebase"],
       demoUrl: "#",
-      codeUrl: "#"
+      codeUrl: "https://github.com/conseil-benjamin/Dreamary"
     },
     {
       id: 3,
@@ -48,20 +46,20 @@ const Index = () => {
                 Web Developer & Designer
               </span>
             </AnimatedSection>
-            
+
             <AnimatedSection animation="fade-in" delay={500}>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold tracking-tight max-w-3xl mb-6 text-white">
                 Creating digital experiences that inspire and engage
               </h1>
             </AnimatedSection>
-            
+
             <AnimatedSection animation="fade-in" delay={700}>
               <p className="text-lg text-white max-w-xl mb-8">
                 I'm a passionate web developer focused on creating intuitive, user-friendly applications
                 that solve real-world problems with clean code and elegant design.
               </p>
             </AnimatedSection>
-            
+
             <AnimatedSection animation="fade-in" delay={900}>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/projects" className={buttonVariants({ variant: "default", size: "lg", className: "bg-white text-blue-600 hover:bg-white/90" }) + " gap-2"}>
@@ -74,7 +72,7 @@ const Index = () => {
             </AnimatedSection>
           </div>
         </div>
-        
+
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
           <a href="#about" aria-label="Scroll down">
             <ArrowDown className="h-6 w-6 text-white" />

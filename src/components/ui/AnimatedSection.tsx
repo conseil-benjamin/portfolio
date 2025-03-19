@@ -1,5 +1,4 @@
-
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
 interface AnimatedSectionProps {
@@ -10,31 +9,31 @@ interface AnimatedSectionProps {
 }
 
 const AnimatedSection = ({
-  children,
-  className,
-  delay = 0,
-  animation = "fade-in",
-}: AnimatedSectionProps) => {
+                           children,
+                           className,
+                           delay = 0,
+                           animation = "fade-in",
+                         }: AnimatedSectionProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => {
-            setIsVisible(true);
-          }, delay);
-          if (sectionRef.current) {
-            observer.unobserve(sectionRef.current);
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              setIsVisible(true);
+            }, delay);
+            if (sectionRef.current) {
+              observer.unobserve(sectionRef.current);
+            }
           }
+        },
+        {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.1,
         }
-      },
-      {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.1,
-      }
     );
 
     if (sectionRef.current) {
@@ -49,17 +48,10 @@ const AnimatedSection = ({
   }, [delay]);
 
   return (
-    <div
-      ref={sectionRef}
-      className={cn(
-        "opacity-0",
-        isVisible && `animate-${animation}`,
-        className
-      )}
-      style={{ animationDelay: `${delay}ms` }}
-    >
-      {children}
-    </div>
+      <div style={{ animationDelay: `${delay}ms` }}
+      >
+        {children}
+      </div>
   );
 };
 
