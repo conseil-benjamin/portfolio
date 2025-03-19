@@ -2,7 +2,7 @@
 import { ArrowDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import Button from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 import ProjectCard from "@/components/ui/ProjectCard";
 
 const Index = () => {
