@@ -3,7 +3,8 @@ import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { Home } from "lucide-react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import Button from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 
 const NotFound = () => {
   const location = useLocation();
@@ -24,9 +25,9 @@ const NotFound = () => {
           The page you're looking for doesn't exist or has been moved.
           Let's get you back on track.
         </p>
-        <Button href="/" size="lg">
-          <Home className="mr-2 h-5 w-5" /> Return Home
-        </Button>
+        <Link to="/" className={buttonVariants({ size: "lg" }) + " gap-2"}>
+          <Home className="h-5 w-5" /> Return Home
+        </Link>
       </AnimatedSection>
     </div>
   );
