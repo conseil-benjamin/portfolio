@@ -2,7 +2,6 @@
 import { ArrowDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import { Button } from "@/components/ui/button";
 import { buttonVariants } from "@/components/ui/button";
 import ProjectCard from "@/components/ui/ProjectCard";
 
@@ -41,9 +40,7 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-50 via-white to-white"></div>
-        
+      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-blue-50 via-white to-white">
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
           <div className="flex flex-col items-center text-center">
             <AnimatedSection animation="fade-in" delay={300}>
@@ -53,13 +50,13 @@ const Index = () => {
             </AnimatedSection>
             
             <AnimatedSection animation="fade-in" delay={500}>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold tracking-tight max-w-3xl mb-6">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold tracking-tight max-w-3xl mb-6 text-gray-900">
                 Creating digital experiences that inspire and engage
               </h1>
             </AnimatedSection>
             
             <AnimatedSection animation="fade-in" delay={700}>
-              <p className="text-lg text-muted-foreground max-w-xl mb-8">
+              <p className="text-lg text-gray-700 max-w-xl mb-8">
                 I'm a passionate web developer focused on creating intuitive, user-friendly applications
                 that solve real-world problems with clean code and elegant design.
               </p>
@@ -80,20 +77,20 @@ const Index = () => {
         
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
           <a href="#about" aria-label="Scroll down">
-            <ArrowDown className="h-6 w-6 text-foreground/70" />
+            <ArrowDown className="h-6 w-6 text-gray-700" />
           </a>
         </div>
       </section>
 
       {/* About Section (Brief) */}
-      <section id="about" className="py-20 sm:py-24 bg-white">
+      <section id="about" className="py-20 sm:py-24 bg-gray-100">
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
           <AnimatedSection>
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-display font-bold tracking-tight mb-6">
+              <h2 className="text-3xl font-display font-bold tracking-tight mb-6 text-gray-900">
                 About Me
               </h2>
-              <p className="text-lg text-muted-foreground mb-8">
+              <p className="text-lg text-gray-700 mb-8">
                 I'm a creative developer with a passion for building beautiful and functional websites
                 and applications. With expertise in modern web technologies, I focus on creating
                 seamless user experiences that delight and inspire.
@@ -107,14 +104,14 @@ const Index = () => {
       </section>
 
       {/* Featured Projects */}
-      <section className="py-20 sm:py-24 bg-secondary/30">
+      <section className="py-20 sm:py-24 bg-blue-50">
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
           <AnimatedSection>
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-display font-bold tracking-tight mb-4">
+              <h2 className="text-3xl font-display font-bold tracking-tight mb-4 text-gray-900">
                 Featured Projects
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
                 Here are some of my recent projects. Each one has been carefully crafted
                 with attention to detail and a focus on user experience.
               </p>
@@ -145,14 +142,14 @@ const Index = () => {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-20 sm:py-24 bg-white">
+      <section className="py-20 sm:py-24 bg-gray-100">
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
           <AnimatedSection>
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-display font-bold tracking-tight mb-4">
+              <h2 className="text-3xl font-display font-bold tracking-tight mb-4 text-gray-900">
                 Let's Work Together
               </h2>
-              <p className="text-lg text-muted-foreground mb-8">
+              <p className="text-lg text-gray-700 mb-8">
                 I'm always open to new projects and collaborations. If you have a project in mind
                 or just want to say hello, I'd love to hear from you.
               </p>
