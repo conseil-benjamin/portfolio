@@ -1,6 +1,5 @@
-
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import { Code, Layout, Palette, Server, GitHub, Linkedin, Mail } from "lucide-react";
+import { Code, Layout, Palette, Server, Github, Linkedin, Mail } from "lucide-react";
 
 const About = () => {
   const skills = [
@@ -92,7 +91,7 @@ const About = () => {
                     className="p-2 rounded-full bg-secondary hover:bg-secondary/80 transition-colors duration-200"
                     aria-label="GitHub"
                   >
-                    <GitHub className="h-5 w-5" />
+                    <Github className="h-5 w-5" />
                   </a>
                   <a 
                     href="https://linkedin.com" 
