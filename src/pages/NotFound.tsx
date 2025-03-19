@@ -16,15 +16,15 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 py-24 bg-gray-50">
+    <div className="min-h-screen flex items-center justify-center px-4 py-24 bg-blue-600 text-white">
       <AnimatedSection className="text-center max-w-md">
-        <h1 className="text-9xl font-display font-bold text-primary">404</h1>
-        <h2 className="text-2xl font-display font-semibold mt-4 mb-6 text-gray-900">Page Not Found</h2>
-        <p className="text-gray-700 mb-8">
+        <h1 className="text-9xl font-display font-bold text-white">404</h1>
+        <h2 className="text-2xl font-display font-semibold mt-4 mb-6 text-white">Page Not Found</h2>
+        <p className="text-blue-100 mb-8">
           The page you're looking for doesn't exist or has been moved.
           Let's get you back on track.
         </p>
-        <Link to="/" className={buttonVariants({ size: "lg" }) + " gap-2"}>
+        <Link to="/" className={buttonVariants({ size: "lg", className: "bg-white text-blue-600 hover:bg-white/90" }) + " gap-2"}>
           <Home className="h-5 w-5" /> Return Home
         </Link>
       </AnimatedSection>

@@ -40,23 +40,23 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-blue-50 via-white to-white">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-blue-500 via-blue-400 to-blue-300">
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
           <div className="flex flex-col items-center text-center">
             <AnimatedSection animation="fade-in" delay={300}>
-              <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+              <span className="inline-block px-3 py-1 rounded-full bg-white/20 text-white text-sm font-medium mb-6">
                 Web Developer & Designer
               </span>
             </AnimatedSection>
             
             <AnimatedSection animation="fade-in" delay={500}>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold tracking-tight max-w-3xl mb-6 text-gray-900">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold tracking-tight max-w-3xl mb-6 text-white">
                 Creating digital experiences that inspire and engage
               </h1>
             </AnimatedSection>
             
             <AnimatedSection animation="fade-in" delay={700}>
-              <p className="text-lg text-gray-700 max-w-xl mb-8">
+              <p className="text-lg text-white max-w-xl mb-8">
                 I'm a passionate web developer focused on creating intuitive, user-friendly applications
                 that solve real-world problems with clean code and elegant design.
               </p>
@@ -64,10 +64,10 @@ const Index = () => {
             
             <AnimatedSection animation="fade-in" delay={900}>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/projects" className={buttonVariants({ size: "lg" }) + " gap-2"}>
+                <Link to="/projects" className={buttonVariants({ variant: "default", size: "lg", className: "bg-white text-blue-600 hover:bg-white/90" }) + " gap-2"}>
                   View my work <ArrowDown className="h-4 w-4 rotate-[-90deg]" />
                 </Link>
-                <Link to="/contact" className={buttonVariants({ variant: "outline", size: "lg" })}>
+                <Link to="/contact" className={buttonVariants({ variant: "outline", size: "lg", className: "border-white text-white hover:bg-white/20" })}>
                   Get in touch
                 </Link>
               </div>
@@ -77,25 +77,25 @@ const Index = () => {
         
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
           <a href="#about" aria-label="Scroll down">
-            <ArrowDown className="h-6 w-6 text-gray-700" />
+            <ArrowDown className="h-6 w-6 text-white" />
           </a>
         </div>
       </section>
 
       {/* About Section (Brief) */}
-      <section id="about" className="py-20 sm:py-24 bg-gray-100">
+      <section id="about" className="py-20 sm:py-24 bg-gray-900 text-white">
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
           <AnimatedSection>
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-display font-bold tracking-tight mb-6 text-gray-900">
+              <h2 className="text-3xl font-display font-bold tracking-tight mb-6 text-white">
                 About Me
               </h2>
-              <p className="text-lg text-gray-700 mb-8">
+              <p className="text-lg text-gray-300 mb-8">
                 I'm a creative developer with a passion for building beautiful and functional websites
                 and applications. With expertise in modern web technologies, I focus on creating
                 seamless user experiences that delight and inspire.
               </p>
-              <Link to="/about" className={buttonVariants({ variant: "outline" })}>
+              <Link to="/about" className={buttonVariants({ variant: "outline", className: "border-white text-white hover:bg-white/10" })}>
                 Learn more about me
               </Link>
             </div>
@@ -104,14 +104,14 @@ const Index = () => {
       </section>
 
       {/* Featured Projects */}
-      <section className="py-20 sm:py-24 bg-blue-50">
+      <section className="py-20 sm:py-24 bg-blue-600 text-white">
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
           <AnimatedSection>
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-display font-bold tracking-tight mb-4 text-gray-900">
+              <h2 className="text-3xl font-display font-bold tracking-tight mb-4 text-white">
                 Featured Projects
               </h2>
-              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+              <p className="text-lg text-blue-100 max-w-2xl mx-auto">
                 Here are some of my recent projects. Each one has been carefully crafted
                 with attention to detail and a focus on user experience.
               </p>
@@ -134,7 +134,7 @@ const Index = () => {
           </div>
 
           <AnimatedSection delay={200} className="text-center mt-12">
-            <Link to="/projects" className={buttonVariants() + " gap-2"}>
+            <Link to="/projects" className={buttonVariants({ className: "bg-white text-blue-600 hover:bg-white/90" }) + " gap-2"}>
               View all projects <ArrowDown className="h-4 w-4 rotate-[-90deg]" />
             </Link>
           </AnimatedSection>
@@ -142,18 +142,18 @@ const Index = () => {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-20 sm:py-24 bg-gray-100">
+      <section className="py-20 sm:py-24 bg-gray-900 text-white">
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
           <AnimatedSection>
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-display font-bold tracking-tight mb-4 text-gray-900">
+              <h2 className="text-3xl font-display font-bold tracking-tight mb-4 text-white">
                 Let's Work Together
               </h2>
-              <p className="text-lg text-gray-700 mb-8">
+              <p className="text-lg text-gray-300 mb-8">
                 I'm always open to new projects and collaborations. If you have a project in mind
                 or just want to say hello, I'd love to hear from you.
               </p>
-              <Link to="/contact" className={buttonVariants({ size: "lg" }) + " gap-2"}>
+              <Link to="/contact" className={buttonVariants({ size: "lg", className: "bg-white text-gray-900 hover:bg-white/90" }) + " gap-2"}>
                 Get in touch <ArrowDown className="h-4 w-4 rotate-[-90deg]" />
               </Link>
             </div>
