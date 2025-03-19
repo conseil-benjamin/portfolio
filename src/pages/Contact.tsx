@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import Button from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail, Send, CheckCircle } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 

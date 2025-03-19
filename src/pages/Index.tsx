@@ -3,6 +3,7 @@ import { ArrowDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import ProjectCard from "@/components/ui/ProjectCard";
 
 const Index = () => {
@@ -66,12 +67,12 @@ const Index = () => {
             
             <AnimatedSection animation="fade-in" delay={900}>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button href="/projects" size="lg" icon>
-                  View my work
-                </Button>
-                <Button href="/contact" variant="outline" size="lg">
+                <Link to="/projects" className={buttonVariants({ size: "lg" }) + " gap-2"}>
+                  View my work <ArrowDown className="h-4 w-4 rotate-[-90deg]" />
+                </Link>
+                <Link to="/contact" className={buttonVariants({ variant: "outline", size: "lg" })}>
                   Get in touch
-                </Button>
+                </Link>
               </div>
             </AnimatedSection>
           </div>
@@ -97,9 +98,9 @@ const Index = () => {
                 and applications. With expertise in modern web technologies, I focus on creating
                 seamless user experiences that delight and inspire.
               </p>
-              <Button href="/about" variant="outline">
+              <Link to="/about" className={buttonVariants({ variant: "outline" })}>
                 Learn more about me
-              </Button>
+              </Link>
             </div>
           </AnimatedSection>
         </div>
@@ -136,9 +137,9 @@ const Index = () => {
           </div>
 
           <AnimatedSection delay={200} className="text-center mt-12">
-            <Button href="/projects" icon>
-              View all projects
-            </Button>
+            <Link to="/projects" className={buttonVariants() + " gap-2"}>
+              View all projects <ArrowDown className="h-4 w-4 rotate-[-90deg]" />
+            </Link>
           </AnimatedSection>
         </div>
       </section>
@@ -155,9 +156,9 @@ const Index = () => {
                 I'm always open to new projects and collaborations. If you have a project in mind
                 or just want to say hello, I'd love to hear from you.
               </p>
-              <Button href="/contact" size="lg" icon>
-                Get in touch
-              </Button>
+              <Link to="/contact" className={buttonVariants({ size: "lg" }) + " gap-2"}>
+                Get in touch <ArrowDown className="h-4 w-4 rotate-[-90deg]" />
+              </Link>
             </div>
           </AnimatedSection>
         </div>
